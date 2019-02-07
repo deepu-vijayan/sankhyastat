@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SitelayoutComponent } from './_layout/sitelayout/sitelayout.component';
-import { ApplayoutComponent } from './_layout/applayout/applayout.component';
+//import { SitelayoutComponent } from './_layout/sitelayout/sitelayout.component';
+// import { ApplayoutComponent } from './_layout/applayout/applayout.component';
 
 
 const routes: Routes = [
 //Site routes goes here 
   { 
     path: 'site', 
-    component: SitelayoutComponent,
-    children: [
-      { path: '', loadChildren: './site/site.module#SiteModule'},
-    ]
+    loadChildren: './site/site.module#SiteModule'
   },
 
   // App routes goes here here

@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ModuleWithProviders } from '@angular/core';
 
+import { SitelayoutComponent } from '../_layout/sitelayout/sitelayout.component';
 import { HomeComponent } from './home/home.component'
 
 export const routes: Routes = [
-    { path: 'site', component:  HomeComponent},
+    { path: '', component:  SitelayoutComponent,
+    children: [
+        {
+            path: '',
+            component: HomeComponent
+        }
+        
+    ]},
 ];
 
 @NgModule({
