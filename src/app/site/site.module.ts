@@ -8,13 +8,15 @@ import { SiteheaderComponent } from '../_layout/siteheader/siteheader.component'
 import { SitefooterComponent } from '../_layout/sitefooter/sitefooter.component';
 import { HomeComponent } from './home/home.component';
 import { MaterialModuleModule } from '../lib/material-module/material-module.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [HomeComponent, SitelayoutComponent, SiteheaderComponent, SitefooterComponent],
   imports: [
     CommonModule,
     SiteRoutingModule,
-    MaterialModuleModule
+    MaterialModuleModule,
+    FlexLayoutModule
   ]
 })
 export class SiteModule { }

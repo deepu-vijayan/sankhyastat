@@ -7,6 +7,8 @@ import {MatNativeDateModule} from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModuleModule } from './lib/material-module/material-module.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 import { DataServiceApiService } from './services/data-service-api.service';
 
@@ -24,7 +26,8 @@ import { AppComponent } from './app.component';
     MatNativeDateModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    FlexLayoutModule
   ],
   providers: [DataServiceApiService],
   bootstrap: [AppComponent]
