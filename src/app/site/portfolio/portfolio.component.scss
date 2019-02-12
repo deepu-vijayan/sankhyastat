@@ -1,0 +1,19 @@
+@import '../../../assets/scss/global.scss';
+mat-grid-tile{
+    
+    mat-card-title{
+        position: absolute;
+        top: 38%;
+        left: 18%;
+        color:$color-bg;
+    }
+    mat-card{
+        padding: 0px 16px;
+        :not([class*=mat-elevation-z]){
+            box-shadow: 0;
+        }
+    }
+    img{
+        border-radius: 4px;
+    }
+}
