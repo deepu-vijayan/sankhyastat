@@ -8,12 +8,15 @@ mat-grid-tile{
         color:$color-bg;
     }
     mat-card{
-        padding: 0px 16px;
-        :not([class*=mat-elevation-z]){
-            box-shadow: 0;
-        }
+        padding: 0px;
+        height: auto;
+        box-shadow:none;
     }
     img{
         border-radius: 4px;
+        box-shadow: 5px 10px 8px #888888;
     }
+}
+mat-grid-list{
+    padding: 10px 0px;
 }

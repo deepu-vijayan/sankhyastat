@@ -1,0 +1,13 @@
+.enquiry-container{
+    display: flex;
+    flex-direction: column;
+}
+.enquiry-container > * {
+    width: 100%;
+  }
+mat-form-field{
+      width: 100%;
+}
+.align-right{
+    text-align: right;
+}

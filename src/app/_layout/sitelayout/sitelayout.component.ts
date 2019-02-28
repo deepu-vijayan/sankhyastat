@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sitelayout.component.html',
   styleUrls: ['./sitelayout.component.scss']
 })
+
 export class SitelayoutComponent implements OnInit {
 
   constructor() { }
