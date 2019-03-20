@@ -10,7 +10,6 @@ import { MatSidenav } from '@angular/material';
 })
 export class SiteSideNavComponent implements AfterViewInit {
   @ViewChild('sidenav') sidenav:MatSidenav;
-  @Input() sidenavStatus:boolean;
   constructor() { }
 
 
