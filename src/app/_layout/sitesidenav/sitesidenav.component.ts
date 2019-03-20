@@ -1,7 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
+import { Component, ViewChild, ElementRef, ViewEncapsulation, AfterViewInit, Input } from '@angular/core';
 import { DataServiceApiService } from '../../services/data-service-api.service';
-
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-sitesidenav',
@@ -9,19 +8,19 @@ import { DataServiceApiService } from '../../services/data-service-api.service';
   styleUrls: ['./sitesidenav.component.scss'],
   providers: [DataServiceApiService]
 })
-export class SiteSideNavComponent implements OnInit {
-  @Output() public sidenavToggle = new EventEmitter();
+export class SiteSideNavComponent implements AfterViewInit {
+  @ViewChild('sidenav') sidenav:MatSidenav;
+  @Input() sidenavStatus:boolean;
+  constructor() { }
 
-  constructor(private dataServicesApi:DataServiceApiService) { }
 
-  ngOnInit() {
-    //load articles
-    //load news sources
+
+  ngAfterViewInit() {
   }
 
 
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
+  onToggleSidenav = () => {
+    this.sidenav.toggle();
   }
 
 }

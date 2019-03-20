@@ -1,29 +1,12 @@
 <mat-sidenav-container>
-    <mat-sidenav  #sidenav role="navigation">
-        <mat-nav-list>
-         <a mat-list-item>
-           <mat-icon class="icon">home</mat-icon>  
-             <span class="label">Home</span>
-         </a>
-         <a mat-list-item>
-           <mat-icon class="icon">contact_support</mat-icon>  
-           <span class="label">Contact</span>
-         </a>
-         <a  mat-list-item type="button">
-           <mat-icon class="icon">history</mat-icon>
-           <span class="label">History</span>
-         </a>  
-         <a  mat-list-item type="button">
-           <mat-icon class="icon">rss_feed</mat-icon>
-           <span class="label">Sankhya News</span>
-         </a> 
-         </mat-nav-list>
-       </mat-sidenav>
-    <mat-sidenav-content>
-      <app-siteheader></app-siteheader>
-      <main>
-            <router-outlet></router-outlet>
-      </main>
-      <app-sitefooter></app-sitefooter>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-sidenav  #lsidenav role="navigation">
+    <app-sitesidenav></app-sitesidenav>
+   </mat-sidenav>
+  <mat-sidenav-content>
+    <app-siteheader (sidenavToggle)=toggleSideBar($event)></app-siteheader>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <app-sitefooter></app-sitefooter>
+  </mat-sidenav-content>
+</mat-sidenav-container>

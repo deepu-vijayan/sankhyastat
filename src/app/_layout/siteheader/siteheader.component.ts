@@ -10,7 +10,7 @@ import { DataServiceApiService } from '../../services/data-service-api.service';
   providers: [DataServiceApiService]
 })
 export class SiteheaderComponent implements OnInit {
-  @Output() public sidenavToggle = new EventEmitter();
+  @Output() sidenavToggle = new EventEmitter();
 
   constructor(private dataServicesApi:DataServiceApiService) { }
 
@@ -20,8 +20,8 @@ export class SiteheaderComponent implements OnInit {
   }
 
 
-  public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
+  onToggleSidenav = () => {
+    this.sidenavToggle.emit('toggle');
   }
 
 }
